@@ -61,15 +61,23 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .post-list{
+                margin: 10px;
+                background: rgba(0,0,0, 0.5);
+                font-size: 16px;
+                color: #fff;
+                padding:15px;
+                font-weight: 600;
+                border-radius: 15px;
+            }
         </style>
     </head>
     <body>
-{{--    {{$posts}}--}}
         <div class="flex-center position-ref full-height">
                 <div class="table">
                     <ul>
                         @foreach($posts as $post)
-                            <li>{{$post->title}}    {{$post->published_at}}</li>
+                            <li class="post-list">{{$post->title}}  /  {{$post->published_at}} </li>
                         @endforeach
                     </ul>
                 </div>
